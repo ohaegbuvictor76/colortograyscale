@@ -1,16 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+from pathlib import Path
 
 # Check if the input and iutput file paths are given in the CLI.
 if len(sys.argv) < 3:
-    print("Error:Missing Arguments")
-    print("Usage:\npython main.py <input_img_file_path> <output_img_file_path>")
-    sys.exit(1)
+    print("Usage:\npython main.py <input_img_file_path> <output_img_file_path>\n")
+    print("Some arguments were not given in the CLI you can run it again with the above format or use the inputs below.\n")
+    input_path = Path(input("What is the file path to the image you want to convert to grayscale: "))
+    output_path = Path(input("What do you want to save the grayscale image as (Enter the path with the extension included): "))
+else: 
+    # Assign the paths to variables
+    input_path = Path(sys.argv[1])
+    output_path = Path(sys.argv[2])
 
-# Assign the paths to variables
-input_path = sys.argv[1]
-output_path = sys.argv[2]
+
 
 # Check if the input file exists by trying to read it
 try:

@@ -32,6 +32,10 @@ Run the script from your terminal using the following format:
 
 python main.py \<input\_img\_file\_path\> \<output\_img\_file\_path\>
 
+If the file paths are not provided in the CLI you can still input them during the process of running the script.
+
+The CLI input method are recommended due to speed of execution.
+
 ### **Arguments**
 
 * \<input\_img\_file\_path\>: The path to the image you want to convert (e.g., photo.jpg).  
